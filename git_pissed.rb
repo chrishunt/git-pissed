@@ -1,21 +1,23 @@
 #!/bin/ruby
 
 # Git Pissed
+# git_pissed.rb
 #
 # Track words of interest over time in your git repository. Output is formatted
 # as CSV for import into graphing tool. Case is ignored.
 #
 # Usage:
-#   # track default set of words (shit, fuck, love, todo)
+#
+#   # Track default set of words (shit, fuck, love, todo)
 #   $ git_pissed
 #
-#   # track custom set of words
+#   # Track custom set of words
 #   $ git_pissed happy love california
 
 require 'pry'
 require 'ruby-progressbar'
 
-MAX_REVISIONS = 3
+MAX_REVISIONS = 30
 
 DEFAULT_WORDS = %w(
   shit
@@ -25,13 +27,18 @@ DEFAULT_WORDS = %w(
 )
 
 def words
-  DEFAULT_WORDS
+  @words ||= (ARGV.empty? ? DEFAULT_WORDS : ARGV)
 end
 
 def revisions
   @revisions ||= begin
-    revisions = `git rev-list --all`.split
-    revisions.each_slice(revisions.count / MAX_REVISIONS).map(&:first)
+    revs = `git rev-list --all`.split
+
+    if revs.count > MAX_REVISIONS
+      revs = revs.each_slice(revs.count / MAX_REVISIONS).map(&:first)
+    end
+
+    revs
   end
 end
 
@@ -67,13 +74,12 @@ def words_by_date
 end
 
 def csv
-  csv = ["date", *words].join(',')
-
-  words_by_date.keys.sort.each do |date|
-    csv << "\n" << [date, *words_by_date[date].values].join(',')
+  csv = ["date", *words].join(',').tap do |csv|
+    words_by_date.keys.sort.each do |date|
+      csv << "\n" << [date, *words_by_date[date].values].join(',')
+    end
   end
-
-  csv
 end
 
-puts csv
+puts "Tracking #{words.join(', ')} ..."
+puts "\n#{csv}"
