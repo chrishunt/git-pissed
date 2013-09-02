@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+
+# Git Pissed
+# git_pissed.rb
+#
+# Track words of interest over time in your git repository. Output is formatted
+# as CSV for import into graphing tool. Case is ignored.
+#
+# Usage:
+#
+#   # Track default set of words (shit, fuck, love, todo)
+#   $ git_pissed
+#
+#   # Track custom set of words
+#   $ git_pissed happy love california
+
+require './lib/git_pissed'
+
+GitPissed::CLI.new(ARGV).execute
