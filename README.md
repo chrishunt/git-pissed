@@ -4,9 +4,9 @@
 
 Are the developers on your team frustrated? Do you wish you had better tests?
 Do rainy days get you down? Do you have enough stackoverflow links in your
-code? Answer these questions *today* with `git-pissed`
+code? Answer these questions *today* with `git pissed`
 
-`git-pissed` tracks any number of words across your entire git history. The
+`git pissed` tracks any number of words across your entire git history. The
 defaults are **wildly offensive** and inspired by [Vidar Holen's Linux Kernel
 Swear Counts](http://www.vidarholen.net/contents/wordcount).
 
@@ -19,14 +19,14 @@ Install the gem, open a git repo, and git pissed.
 ```bash
 $ gem install git_pissed
 $ cd my/git/repo
-$ git-pissed && open git-pissed.html
+$ git pissed && open git-pissed.html
 ```
 
-Sometimes we want to track happiness instead of **ANGER!!** `git-pissed` allows
+Sometimes we want to track happiness instead of **ANGER!!** `git pissed` allows
 the tracking of any set of words.
 
 ```bash
-$ git-pissed --words=love,hate,rainbow
+$ git pissed --words=love,hate,rainbow
 ```
 
 ![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-love-hate-rainbow.png)
@@ -34,7 +34,7 @@ $ git-pissed --words=love,hate,rainbow
 If you are a graphing wizard and just want the data, generate a CSV instead.
 
 ```bash
-$ git-pissed --format=csv
+$ git pissed --format=csv
 $ cat git-pissed.csv
 date,love,hate,rainbow
 2010-12-27,37,3,2
@@ -49,13 +49,13 @@ amount specified in `max-revisions` (defaults to 30) will be scanned evenly
 throughout the entire git history.
 
 ```bash
-$ git-pissed --max-revisions=100
+$ git pissed --max-revisions=100
 ```
 
 ![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-100res.png)
 
 ```bash
-$ git-pissed --max-revisions=15
+$ git pissed --max-revisions=15
 ```
 
 ![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-15res.png)
