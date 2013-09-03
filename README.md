@@ -83,6 +83,10 @@ $ gem install git_pissed
 Please see the [Contributing
 Document](https://github.com/chrishunt/git-pissed/blob/master/CONTRIBUTING.md)
 
+## Changelog
+Please see the [Changelog
+Document](https://github.com/chrishunt/git-pissed/blob/master/CHANGELOG.md)
+
 ## License
 Copyright (C) 2013 Chris Hunt, [MIT
 License](https://github.com/chrishunt/git-pissed/blob/master/LICENSE.txt)
