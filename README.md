@@ -73,6 +73,9 @@ options:
         --version                    Show version
 ```
 
+## Requirements
+`git-pissed` requires Ruby `1.9` or later. Welcome to the future!
+
 ## Installation
 
 ```bash
