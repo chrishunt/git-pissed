@@ -1,9 +1,10 @@
 require 'ruby-progressbar'
 
-require './lib/git_pissed/git'
-require './lib/git_pissed/word_finder'
-require './lib/git_pissed/csv'
-require './lib/git_pissed/cli'
+require 'git_pissed/version'
+require 'git_pissed/git'
+require 'git_pissed/word_finder'
+require 'git_pissed/csv'
+require 'git_pissed/cli'
 
 module GitPissed
   MAX_REVISIONS = 5
