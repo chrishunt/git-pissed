@@ -1,10 +1,11 @@
-require 'ostruct'
 require 'optparse'
 require 'ruby-progressbar'
 
 require 'git_pissed/version'
 require 'git_pissed/git'
 require 'git_pissed/word_finder'
-require 'git_pissed/csv'
+require 'git_pissed/format'
+require 'git_pissed/formats/csv'
+require 'git_pissed/formats/html'
 require 'git_pissed/options'
 require 'git_pissed/cli'
