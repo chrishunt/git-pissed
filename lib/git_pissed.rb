@@ -7,7 +7,7 @@ require 'git_pissed/csv'
 require 'git_pissed/cli'
 
 module GitPissed
-  MAX_REVISIONS = 5
+  MAX_REVISIONS = 30
 
   DEFAULT_WORDS = %w(
     shit
