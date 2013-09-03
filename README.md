@@ -19,7 +19,7 @@ Install the gem, open a git repo, and git pissed.
 ```bash
 $ gem install git_pissed
 $ cd my/git/repo
-$ git-pissed
+$ git-pissed && open git-pissed.html
 ```
 
 Sometimes we want to track happiness instead of **ANGER!!** `git-pissed` allows
