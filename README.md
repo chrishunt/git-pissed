@@ -1,29 +1,81 @@
-# GitPissed
+# `git-pissed`
 
-TODO: Write a gem description
+### gitting pissed about your code.
 
-## Installation
+Are the developers on your team frustrated? Do you wish you had better tests?
+Do rainy days get you down? Do you have enough stackoverflow links in your
+code? Answer these questions *today* with `git-pissed`.
 
-Add this line to your application's Gemfile:
+`git-pissed` tracks any number of words across your entire git history. The
+defaults are wildly offensive and inspired by [Vidar Holen's Linux Kernel Swear
+Counts](http://www.vidarholen.net/contents/wordcount).
 
-    gem 'git_pissed'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install git_pissed
+![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-100res.gif)
 
 ## Usage
 
-TODO: Write usage instructions here
+Install the gem, open a git repo, and git pissed.
+
+```bash
+$ gem install git_pissed
+$ cd my/git/repo
+$ git pissed
+```
+
+Sometimes we want to track happiness instead of **ANGER!!** `git-pissed` allows
+the tracking of any set of words.
+
+```bash
+$ git-pissed --words=love,hate,rainbow
+```
+
+![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-love-hate-rainbow.png)
+
+If you are a graphing wizard and just want the data, generate a CSV instead.
+
+```bash
+$ git-pissed --format=csv
+```
+
+Got time to spare and want a really cool graph? Increase the resolution. The
+amount specified in `max-revisions` (defaults to 30) will be scanned evenly
+throughout the entire git history.
+
+```bash
+$ git-pissed --max-revisions=100
+```
+
+![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-100res.png)
+
+```bash
+$ git-pissed --max-revisions=15
+```
+
+![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-15res.png)
+
+## Options
+
+```bash
+$ git-pissed --help
+usage: git-pissed [--words=<array>] [--max-revisions=<integer>] [--format=<html|csv>] [--version]
+
+options:
+        --words=shit,fuck,crap       Words to track across entire history
+        --max-revisions=30           Number of revisions to track, spread equally across entire history
+        --format=html                Output format. Supported formats: html, csv
+        --version                    Show version
+```
+
+## Installation
+
+```bash
+$ gem install git_pissed
+```
 
 ## Contributing
+Please see the [Contributing
+Document](https://github.com/chrishunt/git-pissed/blob/master/CONTRIBUTING.md)
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+## License
+Copyright (C) 2013 Chris Hunt, [MIT
+License](https://github.com/chrishunt/git-pissed/blob/master/LICENSE.txt)
