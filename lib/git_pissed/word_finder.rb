@@ -1,13 +1,13 @@
 module GitPissed
-  WordFinder = Struct.new(:revisions, :words) do
+  WordFinder = Struct.new(:revisions, :options) do
     def by_date
       with_sorted_dates do |dates|
         revisions.each do |revision|
-          date = Git.date_for(revision)
+          date = git.date_for(revision)
 
-          words.each do |word|
+          options.words.each do |word|
             dates[date][word] = [
-              dates[date][word], Git.count_for(word, revision)
+              dates[date][word], git.count_for(word, revision)
             ].max
 
             progress_bar.increment
@@ -25,9 +25,13 @@ module GitPissed
     def progress_bar
       @progress_bar ||= begin
         ProgressBar.create \
-          total: revisions.count * words.count,
+          total: revisions.count * options.words.count,
           format: '%e <%B> %p%% %t'
       end
+    end
+
+    def git
+      Git.new(options)
     end
   end
 end
