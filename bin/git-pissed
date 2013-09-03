@@ -16,4 +16,4 @@
 
 require 'git_pissed'
 
-GitPissed::CLI.new(ARGV).execute
+GitPissed::CLI.new.execute

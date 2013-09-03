@@ -1,39 +1,59 @@
 module GitPissed
-  Options = Struct.new(:argv) do
+  class Options
     MAX_REVISIONS = 30
 
     DEFAULT_WORDS = %w(
       shit
       fuck
       crap
-      love
     ).freeze
 
     def words
-      DEFAULT_WORDS
+      @words ||= DEFAULT_WORDS
     end
 
     def max_revisions
-      MAX_REVISIONS
+      @max_revisions ||= MAX_REVISIONS
     end
 
-    def blah
-      options = OpenStruct.new
+    def parse!
+      options = OptionParser.new do |opts|
+        opts.banner = [
+          'usage: git-pissed',
+          '[--words=<array>]',
+          '[--max-revisions=<integer>]',
+          '[--version]'
+        ].join(' ')
 
-      options.words = DEFAULT_WORDS
+        opts.separator "\noptions:"
 
-      OptionParser.new do |opts|
-        opts.banner = "Usage: example.rb [options]"
+        opts.on(
+          "--words=#{DEFAULT_WORDS.join(',')}", Array,
+          'Words to track across entire history'
+        ) do |words|
+          raise OptionParser::InvalidArgument if words.empty?
 
-        opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
-          options[:verbose] = v
+          @words = words
         end
-      end.parse!
 
-      p options
-      p ARGV
+        opts.on(
+          "--max-revisions=#{MAX_REVISIONS}", Integer,
+          'Number of revisions to track, spread equally across entire history'
+        ) do |max_revisions|
+          @max_revisions = max_revisions
+        end
 
-      options
+        opts.on('--version', 'Show version') do
+          puts VERSION
+          exit
+        end
+      end
+
+      options.parse!
+
+      self
+    rescue OptionParser::MissingArgument, OptionParser::InvalidArgument
+      abort options.help
     end
   end
 end

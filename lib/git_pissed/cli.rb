@@ -1,12 +1,12 @@
 module GitPissed
-  CLI = Struct.new(:argv) do
+  class CLI
     def execute
-      puts "Searching for #{options.words.join(', ')}..."
+      puts "Tracking #{options.words.join(', ')}..."
       puts "\n#{csv}"
     end
 
     def options
-      @options ||= Options.new(argv)
+      @options ||= Options.new.parse!
     end
 
     def csv
