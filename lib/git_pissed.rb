@@ -13,6 +13,5 @@ module GitPissed
     shit
     fuck
     love
-    todo
   ).freeze
 end
