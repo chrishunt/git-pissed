@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = 'git_pissed'
   spec.version       = GitPissed::VERSION
   spec.authors       = ['Chris Hunt']
-  spec.email         = ['chrishunt@github.com']
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.email         = ['c@chrishunt.co']
+  spec.description   = %q{Track words over time in your git repository}
+  spec.summary       = %q{Track words over time in your git repository}
   spec.homepage      = ''
   spec.license       = 'MIT'
 
