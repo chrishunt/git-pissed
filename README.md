@@ -4,11 +4,11 @@
 
 Are the developers on your team frustrated? Do you wish you had better tests?
 Do rainy days get you down? Do you have enough stackoverflow links in your
-code? Answer these questions *today* with `git-pissed`.
+code? Answer these questions *today* with `git-pissed`
 
 `git-pissed` tracks any number of words across your entire git history. The
-defaults are wildly offensive and inspired by [Vidar Holen's Linux Kernel Swear
-Counts](http://www.vidarholen.net/contents/wordcount).
+defaults are **wildly offensive** and inspired by [Vidar Holen's Linux Kernel
+Swear Counts](http://www.vidarholen.net/contents/wordcount).
 
 ![](https://raw.github.com/chrishunt/git-pissed/master/img/graph-100res.gif)
 
@@ -19,7 +19,7 @@ Install the gem, open a git repo, and git pissed.
 ```bash
 $ gem install git_pissed
 $ cd my/git/repo
-$ git pissed
+$ git-pissed
 ```
 
 Sometimes we want to track happiness instead of **ANGER!!** `git-pissed` allows
@@ -35,6 +35,13 @@ If you are a graphing wizard and just want the data, generate a CSV instead.
 
 ```bash
 $ git-pissed --format=csv
+$ cat git-pissed.csv
+date,love,hate,rainbow
+2010-12-27,37,3,2
+2012-03-17,29,5,3
+2012-11-08,35,4,3
+2013-04-08,38,9,3
+2013-09-02,42,9,3
 ```
 
 Got time to spare and want a really cool graph? Increase the resolution. The
