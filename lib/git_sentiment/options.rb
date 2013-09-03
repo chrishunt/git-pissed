@@ -1,4 +1,4 @@
-module GitPissed
+module GitSentiment
   class Options
     MAX_REVISIONS = 30
 
@@ -28,7 +28,7 @@ module GitPissed
     def parse!
       options = OptionParser.new do |opts|
         opts.banner = [
-          'usage: git-pissed',
+          'usage: git-sentiment',
           '[--words=<array>]',
           '[--max-revisions=<integer>]',
           "[--format=<#{FORMATS.join('|')}>]",

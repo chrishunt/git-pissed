@@ -1,4 +1,4 @@
-module GitPissed
+module GitSentiment
   Git = Struct.new(:options) do
     def revisions
       revs = `git rev-list --all`.split

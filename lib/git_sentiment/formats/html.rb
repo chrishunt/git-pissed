@@ -1,4 +1,4 @@
-module GitPissed
+module GitSentiment
   class HTML < Format
     def name
       'HTML'
