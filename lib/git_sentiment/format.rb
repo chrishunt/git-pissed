@@ -8,9 +8,12 @@ module GitSentiment
     end
 
     def file_path
-      @file_path ||= File.open("git-sentiment.#{name.downcase}", 'w') do |file|
+      @file_path ||= begin
+        file = File.open("git-sentiment.#{name.downcase}", 'w')
         file.write formatted
-      end.path
+        file.close
+        file.path
+      end
     end
 
     def name
