@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = GitPissed::VERSION
   spec.authors       = ['Chris Hunt']
   spec.email         = ['c@chrishunt.co']
-  spec.description   = %q{Track words over time in your git repository}
-  spec.summary       = %q{Track words over time in your git repository}
-  spec.homepage      = ''
+  spec.description   = %q{Gitting pissed about your code}
+  spec.summary       = %q{Gitting pissed about your code}
+  spec.homepage      = 'http://chrishunt.co/git-pissed'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files`.split($/)
