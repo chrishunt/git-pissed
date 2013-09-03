@@ -8,7 +8,7 @@
 #
 # Usage:
 #
-#   # Track default set of words (shit, fuck, love, todo)
+#   # Track default set of words (shit, fuck, crap, love)
 #   $ git_pissed
 #
 #   # Track custom set of words

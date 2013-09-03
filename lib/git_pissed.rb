@@ -12,6 +12,7 @@ module GitPissed
   DEFAULT_WORDS = %w(
     shit
     fuck
+    crap
     love
   ).freeze
 end
