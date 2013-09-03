@@ -1,7 +1,7 @@
 module GitPissed
   CLI = Struct.new(:argv) do
     def execute
-      puts "Tracking #{words.join(', ')} ..."
+      puts "Searching for #{words.join(', ')}..."
       puts "\n#{csv}"
     end
 
