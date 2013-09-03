@@ -1,4 +1,4 @@
-# `git-pissed`
+# git-pissed
 
 ### gitting pissed about your code.
 
