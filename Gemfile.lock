@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    git_pissed (1.0.1)
+    git_pissed (1.0.2)
       ruby-progressbar
 
 GEM
