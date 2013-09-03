@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = GitPissed::VERSION
   spec.authors       = ['Chris Hunt']
   spec.email         = ['c@chrishunt.co']
-  spec.description   = %q{Gitting pissed about your code}
-  spec.summary       = %q{Gitting pissed about your code}
+  spec.description   = %q{gitting pissed about your code}
+  spec.summary       = %q{gitting pissed about your code}
   spec.homepage      = 'http://chrishunt.co/git-pissed'
   spec.license       = 'MIT'
 
