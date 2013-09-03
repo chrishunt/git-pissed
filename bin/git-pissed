@@ -14,6 +14,6 @@
 #   # Track custom set of words
 #   $ git_pissed happy love california
 
-require './lib/git_pissed'
+require 'git_pissed'
 
 GitPissed::CLI.new(ARGV).execute
