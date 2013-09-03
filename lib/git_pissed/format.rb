@@ -1,4 +1,4 @@
-module GitSentiment
+module GitPissed
   Format = Struct.new(:revisions, :options) do
     def to_s
       [ "#{name.upcase} has been written to #{file_path}",
@@ -9,7 +9,7 @@ module GitSentiment
 
     def file_path
       @file_path ||= begin
-        file = File.open("git-sentiment.#{name.downcase}", 'w')
+        file = File.open("git-pissed.#{name.downcase}", 'w')
         file.write formatted
         file.close
         file.path

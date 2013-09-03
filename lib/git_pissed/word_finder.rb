@@ -1,4 +1,4 @@
-module GitSentiment
+module GitPissed
   WordFinder = Struct.new(:revisions, :options) do
     def by_date
       with_sorted_dates do |dates|

@@ -1,4 +1,4 @@
-module GitSentiment
+module GitPissed
   class CSV < Format
     def name
       'CSV'

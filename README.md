@@ -1,4 +1,4 @@
-# GitSentiment
+# GitPissed
 
 TODO: Write a gem description
 
@@ -6,7 +6,7 @@ TODO: Write a gem description
 
 Add this line to your application's Gemfile:
 
-    gem 'git_sentiment'
+    gem 'git_pissed'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install git_sentiment
+    $ gem install git_pissed
 
 ## Usage
 

@@ -1,0 +1,17 @@
+#!/usr/bin/env ruby
+
+# Git Pissed
+#
+# Gitting pissed about your code.
+#
+# Usage:
+#
+#   # Track default set of words (shit, fuck, crap)
+#   $ git-pissed
+#
+#   # Track custom set of words, max of 40 revisions, format as HTML
+#   $ git-pissed --words=love,hate --max-revisions=40 --format=html
+
+require 'git_pissed'
+
+GitPissed::CLI.new.execute

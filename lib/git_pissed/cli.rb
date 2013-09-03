@@ -1,4 +1,4 @@
-module GitSentiment
+module GitPissed
   class CLI
     def execute
       puts "Measuring #{options.words.join(', ')}..."
