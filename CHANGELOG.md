@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.0.3
+*2013-09-03*
+
+- Ruby 1.8 compatibility
+
 ##v1.0.2
 *2013-09-03*
 
