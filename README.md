@@ -74,7 +74,7 @@ options:
 ```
 
 ## Requirements
-`git-pissed` requires Ruby `1.9` or later. Welcome to the future!
+`git-pissed` requires Ruby `1.8.7` or later. Welcome to the future!
 
 ## Installation
 
