@@ -24,10 +24,9 @@ module GitPissed
 
     def progress_bar
       @progress_bar ||= begin
-        ProgressBar.create(
-          total: (revisions.count * options.words.count),
-          format: '%e <%B> %p%% %t'
-        )
+        ProgressBar.create \
+          :total  => (revisions.count * options.words.count),
+          :format => '%e <%B> %p%% %t'
       end
     end
 
