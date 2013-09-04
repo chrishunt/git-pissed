@@ -11,7 +11,7 @@ module GitPissed
     FORMATS = %w(
       html
       csv
-    )
+    ).freeze
 
     def words
       @words ||= DEFAULT_WORDS

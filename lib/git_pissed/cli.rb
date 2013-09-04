@@ -10,7 +10,7 @@ module GitPissed
     end
 
     def formatted_output
-      public_send options.format
+      send options.format
     end
 
     def csv
