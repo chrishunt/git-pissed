@@ -9,9 +9,9 @@ module GitPissed
     end
 
     def table
-      [["date", *words_by_date[0][1].keys].join(',')].tap do |table|
+      [["date", *options.words].join(',')].tap do |table|
         words_by_date.each do |date, words|
-          table << [date, *words.values].join(',')
+          table << [date, words.values_at(*options.words)].join(',')
         end
       end
     end
