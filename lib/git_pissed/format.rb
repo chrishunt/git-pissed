@@ -1,5 +1,5 @@
 module GitPissed
-  Format = Struct.new(:revisions, :options) do
+  Format = Struct.new(:words_by_date, :options) do
     def to_s
       [ "#{name.upcase} has been written to #{file_path}",
         "To open:",

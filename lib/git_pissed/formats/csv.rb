@@ -9,10 +9,8 @@ module GitPissed
     end
 
     def table
-      by_date = WordFinder.new(revisions, options).by_date
-
       [["date", *options.words].join(',')].tap do |table|
-        by_date.each do |date, words|
+        words_by_date.each do |date, words|
           table << [date, *words.values].join(',')
         end
       end

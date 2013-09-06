@@ -14,15 +14,18 @@ module GitPissed
     end
 
     def csv
-      @csv ||= CSV.new(revisions, options)
+      @csv ||= CSV.new(words_by_date, options)
     end
 
     def html
-      @html ||= HTML.new(revisions, options)
+      @html ||= HTML.new(words_by_date, options)
     end
 
-    def revisions
-      Git.new(options).revisions
+    def words_by_date
+      WordFinder.new(
+        Git.new(options).revisions,
+        options
+      ).by_date
     end
   end
 end

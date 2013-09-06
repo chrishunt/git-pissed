@@ -11,7 +11,10 @@ module GitPissed
     end
 
     def csv
-      CSV.new(revisions, options).table.map { |r| "'#{r.strip}\\n'" }.join('+')
+      CSV.new(words_by_date, options).
+        table.
+        map { |r| "'#{r.strip}\\n'" }.
+        join('+')
     end
   end
 end
