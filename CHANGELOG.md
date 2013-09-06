@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.0.4
+*2013-09-06*
+
+- Pass the final data to each formatter instead of the revisions
+
 ##v1.0.3
 *2013-09-03*
 
