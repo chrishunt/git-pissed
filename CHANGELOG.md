@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.0.5
+*2013-09-06*
+
+- [#4](https://github.com/chrishunt/git-pissed/pull/4): Fix word ordering for Ruby `1.8.7`
+
 ##v1.0.4
 *2013-09-06*
 
