@@ -1,5 +1,11 @@
 # Changelog
 
+##v1.0.6
+*2014-01-02*
+
+- [#8](https://github.com/chrishunt/git-pissed/pull/8) Fix typo in css
+- [#9](https://github.com/chrishunt/git-pissed/pull/9) Specify gem versions in gemspec
+
 ##v1.0.5
 *2013-09-06*
 
