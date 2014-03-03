@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.0.7
+*2014-03-02*
+
+- [#11](https://github.com/chrishunt/git-pissed/pull/11) Update gems
+
 ##v1.0.6
 *2014-01-02*
 
