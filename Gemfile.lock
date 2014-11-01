@@ -14,6 +14,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.5.0)
+  bundler (~> 1.7.4)
   git_pissed!
   rake (~> 10.1.0)

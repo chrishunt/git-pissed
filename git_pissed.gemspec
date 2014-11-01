@@ -20,6 +20,6 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'ruby-progressbar', '~> 1.4.0'
 
-  spec.add_development_dependency 'bundler', '~> 1.5.0'
+  spec.add_development_dependency 'bundler', '~> 1.7.4'
   spec.add_development_dependency 'rake',    '~> 10.1.0'
 end
