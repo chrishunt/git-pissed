@@ -7,7 +7,7 @@ module GitPissed
     def formatted
       File.read(
         File.expand_path('../templates/index.html', __FILE__)
-      ).gsub("%CSV%", csv)
+      ).gsub("%CSV%", csv).gsub("%PATH%", File.basename(Dir.pwd))
     end
 
     def csv
