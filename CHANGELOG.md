@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.1.0
+*2015-01-05*
+
+- [#15](https://github.com/chrishunt/git-pissed/pull/15) Add current directory to graph title
+
 ##v1.0.7
 *2014-03-02*
 
