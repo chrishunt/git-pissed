@@ -7,7 +7,7 @@ PATH
 GEM
   remote: https://rubygems.org/
   specs:
-    rake (10.3.2)
+    rake (10.4.2)
     ruby-progressbar (1.7.5)
 
 PLATFORMS
@@ -16,7 +16,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.10.0)
   git_pissed!
-  rake (~> 10.3.2)
+  rake (~> 10.4.2)
 
 BUNDLED WITH
    1.10.6
