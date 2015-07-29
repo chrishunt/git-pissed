@@ -2,18 +2,21 @@ PATH
   remote: .
   specs:
     git_pissed (1.1.0)
-      ruby-progressbar (~> 1.6.1)
+      ruby-progressbar (~> 1.7.5)
 
 GEM
   remote: https://rubygems.org/
   specs:
-    rake (10.3.2)
-    ruby-progressbar (1.6.1)
+    rake (10.4.2)
+    ruby-progressbar (1.7.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.7.4)
+  bundler (~> 1.10.0)
   git_pissed!
-  rake (~> 10.3.2)
+  rake (~> 10.4.2)
+
+BUNDLED WITH
+   1.10.6
